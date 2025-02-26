@@ -1,0 +1,5 @@
+aws kms encrypt \
+    --key-id alias/catrobot \
+    --plaintext fileb:///home/cloudshell-user/stayhard.txt \
+    --output text \
+    --query CiphertextBlob | base64 --decode > not_stayhard.enc
