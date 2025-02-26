@@ -1,0 +1,4 @@
+aws kms decrypt \
+    --ciphertext-blob fileb://not_stayhard.enc \
+    --output text \
+    --query Plaintext | base64 --decode > decryptedplains.txt
